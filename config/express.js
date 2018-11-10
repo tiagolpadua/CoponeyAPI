@@ -7,9 +7,9 @@ var express = require('express')
 
 app.use(cors());
 
-app.set('clientPath', path.join(__dirname, '../..', 'client'));
-console.log(app.get('clientPath'));
-app.use(express.static(app.get('clientPath')));
+app.set('publicPath', path.join(__dirname, '..', 'public'));
+console.log(app.get('publicPath'));
+app.use(express.static(app.get('publicPath')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

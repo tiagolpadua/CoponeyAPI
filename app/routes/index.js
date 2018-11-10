@@ -13,6 +13,6 @@ module.exports  = function(app) {
         .put(api.atualiza);
 
     app.all('/*', function(req, res) {
-        res.sendFile(path.join(app.get('clientPath'), 'index.html'));
+        res.sendFile(path.join(app.get('publicPath'), 'index.html'));
     });
 };
